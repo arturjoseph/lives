@@ -12,14 +12,14 @@
 	<artifactId>teste-unidade</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Teste de Unidade</name>
-	<description>Projeto para exercícios de testes de unidade</description>
+	<description>Projeto para colocar em prática o conceito de testes de unidade</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
