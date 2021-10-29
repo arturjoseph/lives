@@ -38,6 +38,7 @@ public class PessoaService {
         }
         Pessoa pessoaPersistida = this.pessoaRepository.save(pessoa);
         this.enderecoRepository.saveAll(pessoa.getEnderecos());
+        this.telefoneRepository.saveAll(pessoa.getTelefones());
         return pessoaPersistida;
     }
 
