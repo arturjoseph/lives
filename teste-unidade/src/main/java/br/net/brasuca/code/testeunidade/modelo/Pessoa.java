@@ -1,6 +1,7 @@
 package br.net.brasuca.code.testeunidade.modelo;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,7 +13,9 @@ public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
+    @NonNull
     private String nome;
+    @NonNull
     private String cpf;
     @JsonManagedReference
     @OneToMany(mappedBy = "pessoa")
@@ -47,5 +50,9 @@ public class Pessoa {
 
     public List<Telefone> getTelefones() {
         return telefones;
+    }
+
+    public void adicionarTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
     }
 }

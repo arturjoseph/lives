@@ -31,15 +31,15 @@ public class TesteDeUnidadeApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		Pessoa artur = new Pessoa("Artur","12345678910");
 		Pessoa ze = new Pessoa("Ze","78945612310");
-		pessoaRepo.saveAll(Arrays.asList(artur,ze));
+		this.pessoaRepo.saveAll(Arrays.asList(artur,ze));
 
 		Endereco end1 = new Endereco("Rua 1",10,"casa 1","bairro 1","cidade 1", "SP",artur);
 		Endereco end2 = new Endereco("Rua 2",20,"casa 2","bairro 2","cidade 1", "SP",ze);
-		enderecoRepo.saveAll(Arrays.asList(end1,end2));
+		this.enderecoRepo.saveAll(Arrays.asList(end1,end2));
 
-		Telefone tel1 = new Telefone(11,912345678,artur);
-		Telefone tel2 = new Telefone(11,987654321,ze);
-		telefoneRepo.saveAll(Arrays.asList(tel1,tel2));
+		Telefone tel1 = new Telefone("011","912345678",artur);
+		Telefone tel2 = new Telefone("011","987654321",ze);
+		this.telefoneRepo.saveAll(Arrays.asList(tel1,tel2));
 
 	}
 }

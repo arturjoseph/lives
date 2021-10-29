@@ -11,16 +11,21 @@ public class Telefone {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
-    private Integer ddd;
-    private Integer numero;
+    private String ddd;
+    private String numero;
     @JsonBackReference
     @ManyToOne
     private Pessoa pessoa;
 
-    public Telefone(Integer ddd, Integer numero, Pessoa pessoa) {
+    public Telefone(String ddd, String numero, Pessoa pessoa) {
         this.ddd = ddd;
         this.numero = numero;
         this.pessoa = pessoa;
+    }
+
+    public Telefone(String ddd, String numero) {
+        this.ddd = ddd;
+        this.numero = numero;
     }
 
     public Telefone() {
@@ -31,11 +36,11 @@ public class Telefone {
         return codigo;
     }
 
-    public Integer getDdd() {
+    public String getDdd() {
         return ddd;
     }
 
-    public Integer getNumero() {
+    public String getNumero() {
         return numero;
     }
 
