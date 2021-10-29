@@ -31,7 +31,7 @@ public class PessoaController {
             throws UnicidadeCpfException, UnicidadeTelefoneException {
 
         Pessoa pessoaCadastrada = this.servico.cadastrar(pessoa);
-        URI uri = uriBuilder.path("pessoas/{codigo}").buildAndExpand(pessoa.getCodigo()).toUri();
+        URI uri = uriBuilder.path("pessoas/{codigo}").buildAndExpand(pessoaCadastrada.getCodigo()).toUri();
         return ResponseEntity.created(uri).build();
     }
 

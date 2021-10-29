@@ -55,4 +55,19 @@ public class Pessoa {
     public void adicionarTelefones(List<Telefone> telefones) {
         this.telefones = telefones;
     }
+
+	public void setTelefones(List<Telefone> telefones) {
+		this.telefones = telefones;
+		
+	}
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setCodigo(long l) {
+this.codigo = codigo;		
+	}
 }

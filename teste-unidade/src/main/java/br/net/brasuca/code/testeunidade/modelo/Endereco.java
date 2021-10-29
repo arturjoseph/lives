@@ -20,14 +20,13 @@ public class Endereco {
     @ManyToOne
     private Pessoa pessoa;
 
-    public Endereco(String logradouro, Integer numero, String complemento, String bairro, String cidade, String estado, Pessoa pessoa) {
+    public Endereco(String logradouro, Integer numero, String complemento, String bairro, String cidade, String estado) {
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
         this.bairro = bairro;
         this.cidade = cidade;
         this.estado = estado;
-        this.pessoa = pessoa;
     }
 
     public Endereco() {
@@ -59,4 +58,8 @@ public class Endereco {
     public Pessoa getPessoa() {
         return pessoa;
     }
+
+	public void setPessoa(Pessoa pessoa) {
+this.pessoa = pessoa;		
+	}
 }
